@@ -1,0 +1,71 @@
+baseURL = "https://wrong.wang/"
+languageCode = "zh-CN"
+title = "wrong.wang"
+theme = "../../hugo-w2ng"
+pygmentsStyle="github"
+hasCJKLanguage = true
+enableEmoji = true
+googleAnalytics = "UA-120056178-1"
+copyright = "This work is licensed under a CC BY-NC 4.0(署名-非商业性使用 4.0 国际) License."
+
+[author]
+    name = "王锐"
+
+disableKinds = ["taxonomyTerm"]
+
+[params]
+  description = "王不对的个人网站"
+  slogan = "前进"
+  Footer = "© 2019 王不对 - **[CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/)** - **[RSS](/blog/index.xml)**"
+  HomeDesc = "**[博客](/blog/) 和 [飞行手册](/flight-rules/)中还有很多文章✨**"
+  AuthorName = "王不对"
+  Favicon = "/favicon.jpg"
+  fontsLink = "https://fonts.googleapis.com/css?family=Noto+Serif+SC:400,500,700&display=swap&subset=chinese-simplified"
+
+[params.CDN]
+#enable = false
+enable = false
+# Host must end with `/`
+Host = "https://lowentropy.jinxiapu.cn/img/"
+
+[params.comments.isso]
+Host = "https://c.jinxiapu.cn/"
+
+[[menu.main]]
+    name = "博客"
+    url = "/blog/"
+    weight = 1
+[[menu.main]]
+    name = "飞行手册"
+    url = "/flight-rules/"
+    weight = 4
+[[menu.main]]
+    name = "论文笔记"
+    url = "/paper-notes/"
+    weight = 5
+[[menu.main]]
+    name = "只言片语"
+    url = "/quote/"
+    weight = 6
+[[menu.main]]
+    name = "关于"
+    url = "/about/"
+    weight = 2
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.extensions]
+      definitionList = true
+      footnote = true
+      linkify = true
+      strikethrough = true
+      table = true
+      taskList = true
+      typographer = true
+    [markup.goldmark.parser]
+      attribute = true
+      autoHeadingID = true
+    [markup.goldmark.renderer]
+      hardWraps = false
+      unsafe = true
+      xHTML = false

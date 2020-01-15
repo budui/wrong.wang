@@ -1,0 +1,7 @@
+{{ if .HasShortcode "cryptedmail" }}
+<style>
+.cryptedmail:after {
+  content: attr(data-name) "@" attr(data-domain) "." attr(data-tld); 
+}
+</style>
+{{ end }}
