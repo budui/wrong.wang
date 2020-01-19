@@ -20,7 +20,7 @@ disableKinds = ["taxonomyTerm"]
   HomeDesc = "**[博客](/blog/) 和 [飞行手册](/flight-rules/)中还有很多文章✨**"
   AuthorName = "王不对"
   Favicon = "/favicon.jpg"
-  fontsLink = "https://fonts.googleapis.com/css?family=Noto+Serif+SC:400,500,700&display=swap&subset=chinese-simplified"
+  fontsLink = "https://fonts.googleapis.com/css?family=Noto+Serif+SC:400,700&display=swap&subset=chinese-simplified"
 
 [params.CDN]
 #enable = false
