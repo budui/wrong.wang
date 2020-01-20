@@ -1,0 +1,9 @@
+[build]
+publish = "public"
+command = "hugo --minify"
+
+[[redirects]]
+from = "https://wrongwang.netlify.com/*"
+to = "https://wrong.wang/:splat"
+status = 301
+force = true
