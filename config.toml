@@ -22,11 +22,18 @@ disableKinds = ["taxonomyTerm"]
   Favicon = "/favicon.jpg"
   fontsLink = "https://fonts.googleapis.com/css?family=Noto+Serif+SC:400,700&display=swap&subset=chinese-simplified"
 
+[permalinks]
+blog = "/blog/:year:month:day-:title/"
+flight-rules = "/flight-rules/:year:month:day-:title/"
+
 [params.CDN]
 #enable = false
 enable = false
 # Host must end with `/`
 Host = "https://lowentropy.jinxiapu.cn/img/"
+
+[params.comments]
+enable = false
 
 [params.comments.isso]
 Host = "https://c.jinxiapu.cn/"
@@ -36,21 +43,14 @@ Host = "https://c.jinxiapu.cn/"
     url = "/blog/"
     weight = 1
 [[menu.main]]
-    name = "飞行手册"
+    name = "手册"
     url = "/flight-rules/"
-    weight = 4
-[[menu.main]]
-    name = "论文笔记"
-    url = "/paper-notes/"
-    weight = 5
-[[menu.main]]
-    name = "只言片语"
-    url = "/quote/"
-    weight = 6
+    weight = 2
 [[menu.main]]
     name = "关于"
     url = "/about/"
-    weight = 2
+    weight = 3
+
 
 [markup]
   [markup.goldmark]
