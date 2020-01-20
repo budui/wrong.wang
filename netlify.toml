@@ -7,3 +7,15 @@ from = "https://wrongwang.netlify.com/*"
 to = "https://wrong.wang/:splat"
 status = 301
 force = true
+
+[[redirects]]
+  from = "http://wrongwang.netlify.com/*"
+  to = "http://wrong.wang/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "http://wrong.wang/*"
+  to = "https://wrong.wang/:splat"
+  status = 301
+  force = true
