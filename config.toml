@@ -1,7 +1,7 @@
 baseURL = "https://wrong.wang/"
 languageCode = "zh-CN"
 title = "wrong.wang"
-theme = "../../hugo-w2ng"
+theme = "hugo-w2ng"
 pygmentsStyle="github"
 hasCJKLanguage = true
 enableEmoji = true
