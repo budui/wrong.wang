@@ -2,6 +2,11 @@
 publish = "public"
 command = "hugo --minify"
 
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Strict-Transport-Security = "max-age=63072000; includeSubDomains; preload"
+
 [[redirects]]
 from = "https://wrongwang.netlify.com/*"
 to = "https://wrong.wang/:splat"
