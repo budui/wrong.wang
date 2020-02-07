@@ -13,7 +13,7 @@
 		"body": [
 			"{{< expand \"$1\" >}}",
 			"\n$0\n",
-			"{{< \\expand>}}"
+			"{{< /expand >}}"
 		],
 		"description": "shortcode expand"
 	},
@@ -23,7 +23,7 @@
 		"body": [
 			"{{< center >}}",
 			"\n$0\n",
-			"{{< \\center >}}"
+			"{{< /center >}}"
 		],
 		"description": "shortcode center"
 	}
