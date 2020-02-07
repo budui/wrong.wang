@@ -33,7 +33,7 @@ enable = false
 Host = "https://lowentropy.jinxiapu.cn/img/"
 
 [params.comments]
-enable = false
+enable = true
 
 [params.comments.isso]
 Host = "https://c.jinxiapu.cn/"

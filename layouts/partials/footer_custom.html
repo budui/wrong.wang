@@ -1,7 +1,13 @@
 {{ if .HasShortcode "cryptedmail" }}
 <style>
-.cryptedmail:after {
-  content: attr(data-name) "@" attr(data-domain) "." attr(data-tld); 
-}
+  .cryptedmail:after {
+    content: attr(data-name) "@"attr(data-domain) "."attr(data-tld);
+  }
 </style>
 {{ end }}
+
+<style>
+  div#isso-thread .avatar>svg[data-hash="643810579f0b"] {
+    border-radius: 50%
+  }
+</style>
