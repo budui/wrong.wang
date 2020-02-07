@@ -1,6 +1,7 @@
 ---
 title: "Cheatsheet"
 date: 2020-01-27T21:45:37+08:00
+single: true
 ---
 
 {{< expand "`pip`如何使用清华源">}}
