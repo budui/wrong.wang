@@ -106,3 +106,13 @@ sudo systemctl restart docker
 
 
 {{< /expand >}}
+
+{{< expand "ssh客户端保活" >}}
+
+```bash
+Host *
+  ServerAliveInterval 60
+  TCPKeepAlive yes
+```
+
+{{< /expand >}}
