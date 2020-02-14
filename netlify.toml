@@ -24,3 +24,9 @@ force = true
   to = "https://wrong.wang/:splat"
   status = 301
   force = true
+
+[[redirects]]
+  from = "https://wrong.wang/x/*"
+  to = "https://budui.github.io/:splat"
+  status = 200
+  force = true
