@@ -16,7 +16,7 @@ disableKinds = ["taxonomyTerm"]
 [params]
   description = "王不对的个人网站"
   slogan = "前进"
-  Footer = "© 2019 王不对 - **[CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/)** - **[RSS](/blog/index.xml)**"
+  Footer = "© 2018-2020 王不对 - **[CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/)** - **[RSS](/blog/index.xml)**"
   HomeDesc = "**[博客](/blog/) 和 [飞行手册](/flight-rules/)中还有很多文章✨**"
   AuthorName = "王不对"
   Favicon = "/favicon.jpg"
