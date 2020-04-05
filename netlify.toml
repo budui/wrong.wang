@@ -8,13 +8,13 @@ command = "hugo --minify"
     Strict-Transport-Security = "max-age=63072000; includeSubDomains; preload"
 
 [[redirects]]
-from = "https://wrongwang.netlify.com/*"
+from = "https://wrongwang.netlify.app/*"
 to = "https://wrong.wang/:splat"
 status = 301
 force = true
 
 [[redirects]]
-  from = "http://wrongwang.netlify.com/*"
+  from = "http://wrongwang.netlify.app/*"
   to = "http://wrong.wang/:splat"
   status = 301
   force = true
