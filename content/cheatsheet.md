@@ -116,3 +116,9 @@ Host *
 ```
 
 {{< /expand >}}
+
+{{< expand "git更新子模块" >}}
+```
+git submodule update --remote
+```
+{{< /expand >}}
