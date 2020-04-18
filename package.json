@@ -4,17 +4,17 @@
   "description": "a hugo theme for wrong.wang",
   "main": "index.js",
   "dependencies": {},
+  "repository": "https://github.com/budui/hugo-w2ng",
   "devDependencies": {
-    "@fullhuman/postcss-purgecss": "^1.3.0",
+    "@fullhuman/postcss-purgecss": "^2.1.0",
+    "autoprefixer": "^9.7.4",
     "cssnano": "^4.1.10",
+    "postcss": "^7.0.27",
+    "postcss-cli": "^7.1.0",
     "postcss-import": "^12.0.1",
-    "postcss-reporter": "^6.0.1",
-    "tailwindcss": "^1.1.4"
+    "tailwindcss": "^1.2.0"
   },
-  "scripts": {
-    "build:css": "postcss assets/css/styles.css -o static/css/style.css --config ./assets/css/",
-    "dev:css": "postcss assets/css/styles.css -o static/css/style.css --config ./assets/css/dev/"
-  },
+  "scripts": {},
   "keywords": [
     "theme",
     "tailwind"

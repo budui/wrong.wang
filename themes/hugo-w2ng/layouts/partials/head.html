@@ -15,7 +15,14 @@
 <title>{{- .Title -}}{{- with .Params.subtitle -}} - {{- . -}} {{- end }} - {{ .Site.Title -}}</title>
 {{ end }}
 
-<link rel="stylesheet" href="/css/style.css">
+
+{{ if .Site.IsServer }}
+    {{ $style := resources.Get "css/styles.css" | postCSS (dict "config" "./assets/css/dev/postcss.config.js") }}
+    <link rel="stylesheet" href="{{ $style.RelPermalink }}">
+{{ else }}
+    {{ $style := resources.Get "css/styles.css" | postCSS (dict "config" "./assets/css/postcss.config.js") | minify | fingerprint }}
+    <link rel="stylesheet" href="{{ $style.Permalink }}" integrity="{{ $style.Data.Integrity }}">
+{{ end }}
 
 <!-- Fonts -->
 {{- with .Site.Params.fontsLink -}}
