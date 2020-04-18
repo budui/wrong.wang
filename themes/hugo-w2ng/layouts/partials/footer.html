@@ -21,7 +21,7 @@
 {{- end -}}
 
 {{ $instant_page := resources.Get "js/instant.page.js" | resources.Fingerprint "sha512" }}
-<script type="text/javascript" src="{{ $instant_page.Permalink }}" integrity="{{ $instant_page.Data.Integrity }}"></script>
+<script type="text/javascript" src="{{ $instant_page.RelPermalink }}" integrity="{{ $instant_page.Data.Integrity }}"></script>
 
 {{- if (and .IsPage .Params.comment | default .Page.Site.Params.comments.enable ) -}}
 {{ with .Page.Site.Params.comments.isso.Host }}

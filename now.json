@@ -8,7 +8,17 @@
 	"routes": [
 		{
 			"src": "/(.*)",
-			"dest": "/public/$1"
+			"dest": "/public/$1",
+			"headers": {
+				"Strict-Transport-Security": "max-age=63072000; includeSubDomains; preload"
+			}
+		},
+		{
+			"src": "/x/(.*)",
+			"dest": "https://budui.github.io/$1",
+			"headers": {
+				"Strict-Transport-Security": "max-age=63072000; includeSubDomains; preload"
+			}
 		}
 	]
 }
