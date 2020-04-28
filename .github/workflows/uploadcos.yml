@@ -34,4 +34,4 @@ jobs:
         run: hugo --minify
 
       - name: Upload
-        run: coscmd upload -rs --delete -f --ignore "*.html,*.xml" ./public/ /
+        run: coscmd upload -rs --delete -f --ignore "*.html,*.xml" -H "{'Cache-Control':'public, max-age=7776000'}" ./public/ /
