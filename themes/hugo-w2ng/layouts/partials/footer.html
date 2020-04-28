@@ -27,10 +27,9 @@
 {{ $instant_page := resources.Get "js/instant.page.js" | resources.Fingerprint "sha512" }}
 {{ if (and .Site.Params.CDN.enable (not .Site.IsServer)) }}
 <script type="text/javascript" src="{{ .Site.Params.CDN.HOST }}{{ $instant_page.RelPermalink }}"
-    integrity="{{ $instant_page.Data.Integrity }}"></script>
-{{ else }}
-<script type="text/javascript" src="{{ $instant_page.RelPermalink }}"
     integrity="{{ $instant_page.Data.Integrity }}" crossorigin="anonymous"></script>
+{{ else }}
+<script type="text/javascript" src="{{ $instant_page.RelPermalink }}" integrity="{{ $instant_page.Data.Integrity }}"></script>
 {{ end }}
 
 {{- if (and .IsPage .Params.comment | default .Page.Site.Params.comments.enable ) -}}
