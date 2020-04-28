@@ -1,7 +1,12 @@
 {{ define "main" }}
 <div class="max-w-3xl mx-auto leading-relaxed my-6">
     <a class="block float-right " href="/about/">
-        <img src="/favicon.jpg" class="rounded-full" width=150 height=150 alt="favicon"/>
+        {{ if (and .Site.Params.CDN.enable (not .Site.IsServer)) }}
+        <img src="{{ .Site.Params.CDN.HOST }}{{ .Site.Params.Favicon }}" class="rounded-full" width=150 height=150
+            alt="favicon" />
+        {{ else }}
+        <img src="{{ .Site.Params.Favicon }}" class="rounded-full" width=150 height=150 alt="favicon" />
+        {{ end }}
     </a>
 
     <div class="markdown">
@@ -19,8 +24,6 @@
             {{ end }}
             {{ end }}
         </ul>
-
-
         <p>{{ "**分类：**" | markdownify }}</p>
         <p class="pl-4">
             {{ range  $tagName, $taxonomy := .Site.Taxonomies.categories  }}

@@ -21,7 +21,11 @@
     <link rel="stylesheet" href="{{ $style.RelPermalink }}">
 {{ else }}
     {{ $style := resources.Get "css/styles.css" | postCSS (dict "config" "./assets/css/postcss.config.js") | minify | fingerprint }}
+    {{ if .Site.Params.CDN.enable }}
+    <link rel="stylesheet" href="{{ .Site.Params.CDN.HOST }}{{ $style.RelPermalink }}" integrity="{{ $style.Data.Integrity }}">
+    {{ else }}
     <link rel="stylesheet" href="{{ $style.RelPermalink }}" integrity="{{ $style.Data.Integrity }}">
+    {{ end }}
 {{ end }}
 
 <!-- Fonts -->
@@ -29,7 +33,12 @@
 {{ printf `<link href="%s" rel="stylesheet" />` . | safeHTML }}
 {{- end }}
 <link rel="canonical" href="{{ .Permalink }}">
+
+{{ if (and .Site.Params.CDN.enable (not .Site.IsServer)) }}
+<link rel="shortcut icon" href="{{ .Site.Params.CDN.HOST }}{{ .Site.Params.Favicon }}">
+{{ else }}
 <link rel="shortcut icon" href="{{ .Site.Params.Favicon }}">
+{{ end }}
 
 {{ template "_internal/schema.html" . }}
 {{ template "_internal/opengraph.html" . }}

@@ -15,7 +15,7 @@
     "tailwindcss": "^1.2.0"
   },
   "scripts": {
-    "publish": "rm -rf resources && hugo --minify",
+    "publish": "rm -rf resources && hugo",
     "now": "hugo --minify && now --prod"
   },
   "keywords": [

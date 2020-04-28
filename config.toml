@@ -27,10 +27,9 @@ blog = "/blog/:year:month:day-:title/"
 flight-rules = "/flight-rules/:year:month:day-:title/"
 
 [params.CDN]
-#enable = false
-enable = false
-# Host must end with `/`
-Host = "https://lowentropy.jinxiapu.cn/img/"
+enable = true
+# Host must NOT end with `/`
+Host = "https://wrong-wang-1251968348.file.myqcloud.com"
 
 [params.comments]
 enable = true
