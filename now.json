@@ -8,17 +8,26 @@
 	"routes": [
 		{
 			"src": "/(.*)",
-			"dest": "/public/$1",
 			"headers": {
 				"Strict-Transport-Security": "max-age=63072000; includeSubDomains; preload"
-			}
+			},
+			"continue": true
 		},
 		{
-			"src": "/x/(.*)",
-			"dest": "https://budui.github.io/$1",
-			"headers": {
-				"Strict-Transport-Security": "max-age=63072000; includeSubDomains; preload"
-			}
+			"src": "/x(.*)",
+			"dest": "https://budui.github.io/$1"
+		},
+		{
+			"src": "/(.*)",
+			"dest": "/public/$1"
+		},
+		{
+			"handle": "filesystem"
+		},
+		{
+			"src": "/(.*)",
+			"status": 404,
+			"dest": "/public/404.html"
 		}
 	]
 }
