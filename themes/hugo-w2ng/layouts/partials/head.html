@@ -22,7 +22,7 @@
 {{ else }}
     {{ $style := resources.Get "css/styles.css" | postCSS (dict "config" "./assets/css/postcss.config.js") | minify | fingerprint }}
     {{ if .Site.Params.CDN.enable }}
-    <link rel="stylesheet" href="{{ .Site.Params.CDN.HOST }}{{ $style.RelPermalink }}" integrity="{{ $style.Data.Integrity }}">
+    <link rel="stylesheet" href="{{ .Site.Params.CDN.HOST }}{{ $style.RelPermalink }}" integrity="{{ $style.Data.Integrity }}" crossorigin="anonymous">
     {{ else }}
     <link rel="stylesheet" href="{{ $style.RelPermalink }}" integrity="{{ $style.Data.Integrity }}">
     {{ end }}
