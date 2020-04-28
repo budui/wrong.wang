@@ -4,19 +4,31 @@ on: [push]
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
-    - name: Install coscmd
-      run: sudo pip install coscmd
-    - name: Configure coscmd
-      env:
-        SECRET_ID: ${{ secrets.SecretId }}
-        SECRET_KEY: ${{ secrets.SecretKey }}
-        BUCKET: wrong-wang-1251968348
-        REGION: ap-guangzhou
-      run: coscmd config -a $SECRET_ID -s $SECRET_KEY -b $BUCKET -r $REGION
-    - name: Upload
-      run: coscmd upload -rs --delete ./content / --ignore "*.md"
+      - uses: actions/checkout@v2
+        # with:
+          # submodules: true  # Fetch Hugo themes
+          # fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
+
+      - name: Install coscmd
+        run: sudo pip install coscmd
+      - name: Configure coscmd
+        env:
+          SECRET_ID: ${{ secrets.SecretId }}
+          SECRET_KEY: ${{ secrets.SecretKey }}
+          BUCKET: wrong-wang-1251968348
+          REGION: ap-guangzhou
+        run: coscmd config -a $SECRET_ID -s $SECRET_KEY -b $BUCKET -r $REGION
+
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: "latest"
+          extended: true
+      - name: Build
+        run: hugo --minify
+
+      - name: Upload
+        run: coscmd upload -rs --delete -f --ignore "*.html,*.xml" ./public/ /
