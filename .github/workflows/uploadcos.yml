@@ -8,9 +8,9 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-        # with:
-          # submodules: true  # Fetch Hugo themes
-          # fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
+      # with:
+      # submodules: true  # Fetch Hugo themes
+      # fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
 
       - name: Install coscmd
         run: sudo pip install coscmd
@@ -22,6 +22,9 @@ jobs:
           REGION: ap-guangzhou
         run: coscmd config -a $SECRET_ID -s $SECRET_KEY -b $BUCKET -r $REGION
 
+      - uses: r-lib/actions/setup-pandoc@v1
+        with:
+          pandoc-version: "2.9.2"
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
         with:
