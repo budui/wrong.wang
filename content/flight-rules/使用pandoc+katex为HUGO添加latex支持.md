@@ -46,7 +46,7 @@ hugo调用外部生成器需要两个条件：
 
 如果是正文页且`markup`是`pandoc`（我只在正文包含公式时才改变默认的转换器），就引用KaTex那一套资源。
 
-注意js代码中`document.querySelector('.single')`只适合我的hugo主题，如果你要用这段代码，记得换成你博客网页相应的选择器。
+注意js代码中`document.querySelector('.single')`只适合我的hugo主题，如果你要用这段代码，记得换成你博客网页相应的选择器，选中的DOM节点包含要渲染的公式就可以了。
 
 最后来测试下KaTeX的效果:
 

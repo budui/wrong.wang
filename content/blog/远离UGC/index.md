@@ -1,7 +1,6 @@
 ---
 title: "远离UGC"
 date: 2019-10-11T10:34:30+08:00
-spotlight: true
 categories:
 - 随想
 tags:
