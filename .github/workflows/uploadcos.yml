@@ -35,3 +35,10 @@ jobs:
 
       - name: Upload
         run: coscmd upload -rs --delete -f --ignore "*.html,*.xml" -H "{'Cache-Control':'public, max-age=7776000'}" ./public/ /
+      
+      - uses: amondnet/now-deployment@v2
+        with:
+          zeit-token: ${{ secrets.ZEIT_TOKEN }} # Required 
+          now-args: '--prod' #Optional
+          now-org-id: ${{ secrets.ORG_ID}}  #Required
+          now-project-id: ${{ secrets.PROJECT_ID}} #Required 
