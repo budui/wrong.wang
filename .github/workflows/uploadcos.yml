@@ -30,10 +30,10 @@ jobs:
         with:
           hugo-version: "latest"
           extended: true
-      - name: Build
+      - name: hugo Build
         run: hugo --minify
 
-      - name: Upload
+      - name: Upload to cos
         run: coscmd upload -rs --delete -f --ignore "*.html,*.xml" -H "{'Cache-Control':'public, max-age=7776000'}" ./public/ /
       
       - uses: amondnet/now-deployment@v2
