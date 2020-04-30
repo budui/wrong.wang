@@ -122,3 +122,11 @@ Host *
 git submodule update --remote
 ```
 {{< /expand >}}
+
+
+{{< expand "Ubuntu如何新增sudo用户" >}}
+
+1. `sudo adduser <username>`
+2. `sudo usermod -aG sudo <username>`
+
+{{< /expand >}}
