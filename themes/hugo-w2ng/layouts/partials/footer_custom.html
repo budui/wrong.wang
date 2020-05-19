@@ -6,6 +6,86 @@
 </style>
 {{ end }}
 
+{{ if .HasShortcode "love" }}
+<style>
+  :root {
+    --red: #be2e36;
+    --black: #000000;
+    --white: #ffffff;
+  }
+
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+
+    50% {
+      transform: translateX(-55px) rotate(5deg) scale(2);
+    }
+  }
+
+  .heart {
+    position: relative;
+    left: 3em;
+    top: -13em;
+    height: 10px;
+    width: 10px;
+    z-index: 1;
+
+    animation: pulse 1.52s ease infinite;
+
+    box-shadow:
+      30px 30px 0 0 var(--black),
+      40px 30px 0 0 var(--black),
+      70px 30px 0 0 var(--black),
+      80px 30px 0 0 var(--black),
+      20px 40px 0 0 var(--black),
+      30px 40px 0 0 var(--white),
+      40px 40px 0 0 var(--red),
+      50px 40px 0 0 var(--black),
+      60px 40px 0 0 var(--black),
+      70px 40px 0 0 var(--red),
+      80px 40px 0 0 var(--red),
+      90px 40px 0 0 var(--black),
+      20px 50px 0 0 var(--black),
+      30px 50px 0 0 var(--white),
+      40px 50px 0 0 var(--red),
+      50px 50px 0 0 var(--red),
+      60px 50px 0 0 var(--red),
+      70px 50px 0 0 var(--red),
+      80px 50px 0 0 var(--red),
+      90px 50px 0 0 var(--black),
+      20px 60px 0 0 var(--black),
+      30px 60px 0 0 var(--red),
+      40px 60px 0 0 var(--red),
+      50px 60px 0 0 var(--red),
+      60px 60px 0 0 var(--red),
+      70px 60px 0 0 var(--red),
+      80px 60px 0 0 var(--red),
+      90px 60px 0 0 var(--black),
+      30px 70px 0 0 var(--black),
+      40px 70px 0 0 var(--red),
+      50px 70px 0 0 var(--red),
+      60px 70px 0 0 var(--red),
+      70px 70px 0 0 var(--red),
+      80px 70px 0 0 var(--black),
+      40px 80px 0 0 var(--black),
+      50px 80px 0 0 var(--red),
+      60px 80px 0 0 var(--red),
+      70px 80px 0 0 var(--black),
+      50px 90px 0 0 var(--black),
+      60px 90px 0 0 var(--black);
+  }
+</style>
+<script>
+  (function () {
+    const now = new Date();
+    const start = new Date("2017-05-20 17:00");
+    document.getElementById("date_count").innerText = Math.round((now - start) / (24 * 3600 * 1000));
+  })()
+</script>
+{{ end }}
+
 {{- if (and .IsPage .Params.comment | default .Page.Site.Params.comments.enable ) -}}
 <style>
   div#isso-thread .avatar>svg[data-hash="643810579f0b"] {
