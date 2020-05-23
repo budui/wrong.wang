@@ -46,8 +46,8 @@
 .markdown pre {
   @apply overflow-x-auto p-4 border border-solid border-black my-4;
 }
-.markdown code {
-  @apply border-dashed border-b border-black px-1 font-mono text-lg;
+.markdown p code {
+  @apply px-1 font-mono text-lg;
 }
 .markdown pre code {
   font-size: 16px;
