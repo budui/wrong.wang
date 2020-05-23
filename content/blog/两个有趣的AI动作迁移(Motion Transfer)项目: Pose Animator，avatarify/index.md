@@ -14,7 +14,7 @@ spotlight: true
 
 ## [Pose Animator](https://github.com/yemount/pose-animator)
 
-![](https://cdn.jsdelivr.net/gh/yemount/pose-animator/resources/gifs/avatar-new-1.gif)
+![](https://cdn.jsdelivr.net/gh/yemount/pose-animator@cb2be70a3501e57e66fe185daca44cc2afe18ce8/resources/gifs/avatar-new-1.gif)
 
 `Pose Animator`可以让2D矢量图动起来。它使用基于`TensorFlow.js`的`PoseNet`和`FaceMesh`，能够在浏览器上实时提取视频中人物关键点，并基于此关键点**实时**生成对应动画。`Pose Animator`实现*Motion transfer*主要基于骨架(skeleton)，将真人姿态关键点（由`PoseNet`得到）和人脸表情关键点（由`FashMesh`得到）直接与矢量图的关键点一一对应起来。这样无论人做什么动作，矢量图也能对应地完成动作。
 
@@ -41,7 +41,7 @@ spotlight: true
 
 ## [avatarify](https://github.com/alievk/avatarify)
 
-![](https://cdn.jsdelivr.net/gh/alievk/avatarify/docs/mona.gif)
+![](https://cdn.jsdelivr.net/gh/alievk/avatarify@f693f7563f4f9d9fe51524e3ab3526bd94e2b8a0/docs/mona.gif)
 
 
 `avatarify`可以让预定义的头像跟随输入动起来，配合一些工具可以将输出流虚拟成一个摄像头的输出，这样使用一些视频会议应用时，可以选择虚拟的摄像头，你的同伴们看到的你就是预定义的头像那个样子了。
