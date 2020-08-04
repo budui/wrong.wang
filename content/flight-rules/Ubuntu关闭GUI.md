@@ -20,12 +20,16 @@ sudo systemctl set-default graphical.target
 
 执行以下命令，临时关闭Ubuntu桌面版的GUI环境：
 
-```sudo
+```bash
 sudo service lightdm stop
+# when ubuntu 20.04
+sudo service gdm stop
 ```
 
 执行以下命令，临时开启Ubuntu桌面版的GUI环境：
 
 ```bash
 sudo service lightdm start
+# when ubuntu 20.04
+sudo service gdm start
 ```
