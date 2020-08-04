@@ -20,6 +20,8 @@ sudo systemctl set-default graphical.target
 
 执行以下命令，临时关闭Ubuntu桌面版的GUI环境：
 
+由于Ubuntu20.04 桌面环境从unity变成了Gnome，所以相应的命令工具也换成了gdm
+
 ```bash
 sudo service lightdm stop
 # when ubuntu 20.04
